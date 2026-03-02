@@ -139,7 +139,31 @@ export const myProjects = [
     ],
   },
   {
-    id: 4,
+  id: 4,
+  title: "Blog Platform",
+  description:
+    "A full-stack blogging platform built with the PERN stack, featuring secure user authentication, complete post management, image uploads via Cloudinary, and a nested comments system with protected routes and responsive design.",
+  subDescription: [
+    "Built a RESTful backend API using Node.js and Express.js with PostgreSQL database, leveraging Prisma ORM for type-safe, schema-driven data access and automated migrations.",
+    "Implemented secure JWT-based authentication with bcrypt password hashing, protected routes on both frontend and backend, and CORS configuration for safe cross-origin requests.",
+    "Developed a responsive React frontend with React Router for client-side navigation, Tailwind CSS for modern UI, and react-paginate for efficient post browsing across large datasets.",
+    "Integrated Cloudinary for reliable image hosting and automatic optimization, with Multer handling file uploads and server-side validation ensuring secure and performant media management.",
+    "User login Email - your@email.com, Password - yourpassword"
+  ],
+  href: "https://blog-app-pern-prisma-cloudinary.vercel.app",
+  logo: "",
+  image: "/assets/projects/Blog.png",
+  tags: [
+    { id: 1, name: "React", path: "/assets/logos/react.svg" },
+    { id: 2, name: "NodeJs", path: "/assets/nodejs-icon.svg" },
+    { id: 3, name: "ExpressJs", path: "/assets/expressjs-icon.svg" },
+    { id: 4, name: "PostgreSQL", path: "/assets/projects/postgresql.png" },
+    { id: 5, name: "Prisma", path: "/assets/projects/prisma-orm.png" },
+    { id: 6, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+  ],
+},
+  {
+    id: 5,
     title: "Apple iPhone 15 Pro Website Clone",
     description:
      "A pixel-perfect recreation of Apple's iPhone 15 Pro website showcasing advanced 3D modeling, smooth animations, and interactive product visualization. Features dynamic iPhone models in multiple colors and configurations with professional-grade animations and responsive design.",
