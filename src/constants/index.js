@@ -148,11 +148,11 @@ export const myProjects = [
     "Implemented secure JWT-based authentication with bcrypt password hashing, protected routes on both frontend and backend, and CORS configuration for safe cross-origin requests.",
     "Developed a responsive React frontend with React Router for client-side navigation, Tailwind CSS for modern UI, and react-paginate for efficient post browsing across large datasets.",
     "Integrated Cloudinary for reliable image hosting and automatic optimization, with Multer handling file uploads and server-side validation ensuring secure and performant media management.",
-    "User login Email - your@email.com, Password - yourpassword"
+    "User login Email - test@example.com, Password - password123"
   ],
   href: "https://blog-app-pern-prisma-cloudinary.vercel.app",
   logo: "",
-  image: "/assets/projects/Blog.png",
+  image: "/assets/projects/blog.png",
   tags: [
     { id: 1, name: "React", path: "/assets/logos/react.svg" },
     { id: 2, name: "NodeJs", path: "/assets/nodejs-icon.svg" },
