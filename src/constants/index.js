@@ -152,7 +152,7 @@ export const myProjects = [
   ],
   href: "https://blog-app-pern-prisma-cloudinary.vercel.app",
   logo: "",
-  image: "/assets/projects/Blog.jpeg",
+  image: "/assets/projects/Blog.png",
   tags: [
     { id: 1, name: "React", path: "/assets/logos/react.svg" },
     { id: 2, name: "NodeJs", path: "/assets/nodejs-icon.svg" },
