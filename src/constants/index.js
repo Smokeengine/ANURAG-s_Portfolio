@@ -227,18 +227,7 @@ export const mySocials = [
 ];
 
 export const experiences = [
- 
-  {
-    title: "Graduate Research Assistant",
-    job: "Colorado State University",
-    date: "2025 - Present",
-    contents: [
-      "Conducted empirical OSS research under the guidance of Prof. Bianca Trinkenreich, Ph.D., analyzing 404 locked GitHub threads across 213 OSS projects using hierarchical regression and moderation analysis; found that codes of conduct amplified incivility enforcement by 44–46% (p¡0.05).",
-"Built a scalable pipeline using GitHub REST API, Python NLP, and GPT-4 validation to process 5,961 comments, revealing identity attacks triggered admin intervention 83% of the time, while personal attacks increased resolution time by 50% (r=0.50, p¡0.01).",
-"Designed a predictive classification model across 150+ CS415 student projects, detecting ‘gamer’ patterns in 25% of contributors and improving team dynamics forecasting by 40% via GitHub behavior mining and survey analysis.",
-    ],
-  },
-  {
+ {
     title: "React Developer & UI Engineer ",
     job: "Colorado State University",
     date: "2024 - Present",
@@ -246,6 +235,16 @@ export const experiences = [
       "Led the architecture and development of a full-stack React application using TypeScript, Redux, and Node.js, deployed via AWS CloudFront with CI/CD. Improved navigation efficiency from 6+ to 2 clicks and boosted performance by 60% across 8 core interfaces.",
 "Developed and maintained a scalable component library with Storybook documentation, Jest/RTL test coverage (85%), and WCAG 2.1 compliance. Accelerated engineering velocity by 40% and enabled consistent UI patterns across teams.",
 "Built a production-grade analytics dashboard using React Hooks, MongoDB, and D3.js, deployed with Docker on AWS EC2, enabling real-time usage tracking and reducing support requests by 50% through data-informed UX improvements.",
+    ],
+  },
+  {
+    title: "Graduate Research Assistant",
+    job: "Colorado State University",
+    date: "Jan 2025 - Dec 2025",
+    contents: [
+      "Conducted empirical OSS research under the guidance of Prof. Bianca Trinkenreich, Ph.D., analyzing 404 locked GitHub threads across 213 OSS projects using hierarchical regression and moderation analysis; found that codes of conduct amplified incivility enforcement by 44–46% (p¡0.05).",
+"Built a scalable pipeline using GitHub REST API, Python NLP, and GPT-4 validation to process 5,961 comments, revealing identity attacks triggered admin intervention 83% of the time, while personal attacks increased resolution time by 50% (r=0.50, p¡0.01).",
+"Designed a predictive classification model across 150+ CS415 student projects, detecting ‘gamer’ patterns in 25% of contributors and improving team dynamics forecasting by 40% via GitHub behavior mining and survey analysis.",
     ],
   },
   {
