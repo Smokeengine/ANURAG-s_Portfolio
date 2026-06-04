@@ -1,211 +1,116 @@
 export const myProjects = [
   {
     id: 1,
+    title: "Production RAG Inference System",
+    description:
+      "A production-grade Retrieval-Augmented Generation system built over a 1,700+ document knowledge base, featuring advanced retrieval strategies, automated quality evaluation, and optimized inference pipelines achieving sub-200ms median query latency.",
+    subDescription: [
+      "Achieved 175ms median and 328ms average query latency by implementing BM25 re-ranking, MMR diversification, and controlled top-k retrieval with batch embedding at 128 chunks per batch, eliminating redundant vectorization via content hashing.",
+      "Built hybrid retrieval pipeline using Ollama, Mistral, and ChromaDB with configurable re-ranking strategies, enabling flexible document ingestion and real-time semantic search across large knowledge bases.",
+      "Instrumented retrieval quality using RAGAS evaluation metrics including context recall, faithfulness, and answer relevancy, establishing automated regression baselines to detect pipeline degradation across document and model updates.",
+      "Designed modular architecture supporting document versioning, incremental indexing, and multi-format ingestion, enabling seamless scaling of the knowledge base without full re-vectorization.",
+    ],
+    href: "https://github.com/Smokeengine/rag-chatbot",
+    logo: "",
+    image: "/assets/projects/rag.png",
+    tags: [
+      { id: 1, name: "Python", path: "/assets/projects/icons8-python.svg" },
+      { id: 2, name: "Ollama", path: "/assets/projects/ollama.svg" },
+      { id: 3, name: "ChromaDB", path: "/assets/projects/chromadb.svg" },
+      { id: 4, name: "FastAPI", path: "/assets/projects/fastapi.svg" },
+      { id: 5, name: "Docker", path: "/assets/projects/docker.svg" },
+    ],
+  },
+  {
+    id: 2,
+    title: "LLM Evaluation Infrastructure",
+    description:
+      "A cross-model LLM benchmarking framework evaluating GPT-3.5, GPT-4, and Claude across zero-shot and few-shot prompting strategies over 2,400 samples, quantifying quality improvements and surfacing latency-accuracy trade-offs across model versions.",
+    subDescription: [
+      "Designed and executed a 2,400-sample evaluation framework benchmarking GPT-3.5, GPT-4, and Claude, quantifying a 21.49% average BLEU improvement via few-shot prompting and surfacing latency-quality trade-offs across models.",
+      "Built automated regression testing harness integrating OpenAI and Anthropic APIs with BERTScore, BLEU, and SentenceBERT scoring, enabling reproducible benchmarking and quality drift detection across model versions.",
+      "Implemented structured few-shot prompt engineering pipeline with configurable shot counts and example selection strategies, enabling systematic comparison of prompting strategies at scale.",
+      "Designed evaluation reporting system with statistical aggregation across prompt types and models, producing interpretable latency-quality trade-off visualizations for model selection decisions.",
+    ],
+    href: "https://github.com/Smokeengine/Evaluating-Code-Summarization-using-LLMs",
+    logo: "",
+    image: "/assets/projects/llmeval.png",
+    tags: [
+      { id: 1, name: "Python", path: "/assets/projects/icons8-python.svg" },
+      { id: 2, name: "OpenAI", path: "/assets/projects/openai.svg" },
+      { id: 3, name: "Pandas", path: "/assets/projects/pandas.svg" },
+      { id: 4, name: "Scikit-Learn", path: "/assets/projects/scikitlearn.svg" },
+      { id: 5, name: "Numpy", path: "/assets/projects/numpy.svg" },
+    ],
+  },
+  {
+    id: 3,
+    title: "CollabCode — Real-Time Collaborative Editor",
+    description:
+      "A real-time collaborative code editor supporting simultaneous multi-user editing with conflict-free synchronization, live cursor tracking, and a full-featured Monaco-based IDE experience, deployed on Railway and Vercel.",
+    subDescription: [
+      "Implemented conflict-free real-time collaboration using Yjs CRDTs and Socket.io, enabling multiple users to edit code simultaneously with automatic merge resolution and sub-100ms sync latency.",
+      "Integrated Monaco Editor with full IDE features including syntax highlighting, IntelliSense, and multi-language support, resolving a circular update loop between onDidChangeContent and yText.observe using suppressRef and docReady guards.",
+      "Built real-time presence system with live cursor tracking, user avatars, and active session indicators, providing full awareness of collaborator activity across editing sessions.",
+      "Deployed backend on Railway and frontend on Vercel with environment-based configuration, WebSocket connection management, and graceful reconnection handling for production reliability.",
+    ],
+    href: "https://code-collab-gilt.vercel.app/login",
+    logo: "",
+    image: "/assets/projects/collabcode.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "NodeJs", path: "/assets/nodejs-icon.svg" },
+      { id: 3, name: "Socket.io", path: "/assets/projects/socketio.svg" },
+      { id: 4, name: "MongoDB", path: "/assets/mongodb-icon.svg" },
+      { id: 5, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Multimodal Emotion Recognition System",
+    description:
+      "A multimodal deep learning system that recognizes human emotions from both facial images and speech audio, combining VGG16 transfer learning and MFCC-based neural networks into a unified Streamlit application with live webcam and audio input.",
+    subDescription: [
+      "Built facial emotion recognition model using VGG16 transfer learning with TensorFlow, achieving 94% classification accuracy across 7 emotion classes through fine-tuning on labeled facial expression datasets.",
+      "Developed speech emotion recognition pipeline using MFCC feature extraction and a deep neural network, achieving 85% accuracy on audio samples with real-time inference support for uploaded audio files.",
+      "Designed unified Streamlit application fusing predictions from both modalities, enabling simultaneous emotion analysis from live webcam feed and audio file input with confidence score visualization.",
+      "Implemented modular model architecture separating facial and audio pipelines, allowing independent retraining and evaluation of each modality without affecting the combined inference system.",
+    ],
+    href: "https://github.com/Smokeengine/MultiModal-Emotion-Recognition-System",
+    logo: "",
+    image: "/assets/projects/emotion.png",
+    tags: [
+      { id: 1, name: "Python", path: "/assets/projects/icons8-python.svg" },
+      { id: 2, name: "TensorFlow", path: "/assets/projects/tensorflow.svg" },
+      { id: 3, name: "Keras", path: "/assets/projects/keras.svg" },
+      { id: 4, name: "OpenCV", path: "/assets/projects/opencv.svg" },
+      { id: 5, name: "Scikit-Learn", path: "/assets/projects/scikitlearn.svg" },
+    ],
+  },
+  {
+    id: 5,
     title: "Career Compass",
     description:
-      "A comprehensive full-stack job listing platform that connects job seekers with employers, enabling seamless job discovery, application management, and recruitment processes with advanced filtering, cloud-based media storage, and real-time notifications.",
+      "A comprehensive full-stack job listing platform connecting job seekers with employers, featuring advanced filtering, cloud-based media storage, JWT authentication, and real-time application tracking across a responsive React frontend.",
     subDescription: [
-    "Built scalable backend API using Node.js and Express.js with MongoDB database, implementing JWT authentication, rate limiting, and security middleware including XSS protection and data sanitization for enterprise-level security.",
-"Developed responsive React frontend with Redux Toolkit for state management, React Router for navigation, and Tailwind CSS for modern UI design, ensuring optimal user experience across all devices.",
-"Implemented comprehensive job management system with advanced filtering, search functionality, and real-time application tracking using Axios for API communication and React Hook Form for optimized form handling.",
-"Integrated cloud-based media storage for user profile pictures and company logos, secure user authentication with bcrypt password hashing, role-based access control, and data validation using Mongoose schemas for complete profile management.", 
-"User login Email - test0@gmail.com, Password - 12345678" 
+      "Built scalable backend API using Node.js and Express.js with MongoDB, implementing JWT authentication, rate limiting, XSS protection, and data sanitization middleware for enterprise-level security.",
+      "Developed responsive React frontend with Redux Toolkit for state management, React Router for navigation, and Tailwind CSS, ensuring optimal user experience across all devices.",
+      "Implemented comprehensive job management system with advanced filtering, search functionality, and real-time application tracking using Axios and React Hook Form for optimized form handling.",
+      "Integrated Amazon S3 for cloud-based media storage, bcrypt password hashing, role-based access control, and Mongoose schema validation for complete profile and company logo management.",
     ],
     href: "https://career-compasss.netlify.app/user-auth",
     logo: "",
     image: "/assets/projects/Career.png",
     tags: [
-      {
-        id: 1,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "NodeJs",
-        path: "/assets/nodejs-icon.svg",
-      },
-      {
-        id: 3,
-        name: "ExpressJs",
-        path: "/assets/expressjs-icon.svg",
-      },
-      {
-        id: 4,
-        name: "MongoDB",
-        path: "/assets/mongodb-icon.svg",
-      },
-      {
-        id: 5,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 6,
-        name: "Amazon S3",
-        path: "/assets/icons8-amazon-s3.svg",
-      },
-      {
-        id: 7,
-        name: "Redux",
-        path: "/assets/projects/redux.svg",
-      },
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "NodeJs", path: "/assets/nodejs-icon.svg" },
+      { id: 3, name: "ExpressJs", path: "/assets/expressjs-icon.svg" },
+      { id: 4, name: "MongoDB", path: "/assets/mongodb-icon.svg" },
+      { id: 5, name: "Amazon S3", path: "/assets/icons8-amazon-s3.svg" },
+      { id: 6, name: "Redux", path: "/assets/projects/redux.svg" },
+      { id: 7, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
-  {
-    id: 2,
-    title: "Breast Cancer Detection Using Hybrid Algorithm",
-    description:
-      
-"An advanced machine learning research project that developed a novel hybrid clustering algorithm combining K-Means and Gaussian Mixture Models for early breast cancer detection, achieving superior accuracy compared to conventional methods and contributing to improved patient outcomes.",
-    subDescription: [
-     "Engineered innovative hybrid machine learning model integrating K-Means clustering with Gaussian Mixture Models (GMM), achieving 95.5% accuracy on test data and significantly outperforming traditional detection algorithms in clinical validation.",
-"Processed and analyzed comprehensive dataset of 10,000+ mammogram images using Python, scikit-learn, and advanced data preprocessing techniques, implementing feature extraction and dimensionality reduction for optimal model performance.",
-"Achieved 30% reduction in false negatives compared to conventional detection methods, directly contributing to improved early diagnosis capabilities and patient treatment outcomes through enhanced algorithmic precision.",
-"Published peer-reviewed research paper 'Enhancing the Accuracy of Breast Cancer Detection with a Hybrid Clustering Algorithm Combining K-Means and GMM' in IJRASET (Volume 11, Issue V, May 2023), contributing to academic knowledge in medical AI applications.",
-    ],
-    href: "https://github.com/Smokeengine/breast-cancer-detection-using-hybrid-algorithm",
-    logo: "",
-    image: "/assets/projects/image.png",
-    tags: [
-      {
-        id: 1,
-        name: "Python",
-        path: "/assets/projects/icons8-python.svg",
-      },
-      {
-        id: 2,
-        name: "Numpy",
-        path: "/assets/projects/numpy.svg",
-      },
-      {
-        id: 3,
-        name: "Pandas",
-        path: "/assets/projects/pandas.svg",
-      },
-      {
-        id: 4,
-        name: "Scikit-Learn",
-        path: "/assets/projects/scikitlearn.svg",
-      },
-      {
-        id: 5,
-        name: "Open-Cv",
-        path: "/assets/projects/opencv.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Data Analyst Portfolio",
-    description:
-     "A modern, interactive portfolio website designed for a data analyst professional, featuring dynamic animations, contact functionality, and responsive design to showcase analytical expertise, projects, and professional experience to potential employers and clients.",
-    subDescription: [
-     "Built responsive React application using Vite for optimized build performance and Tailwind CSS for modern UI design, implementing Redux Toolkit for efficient state management and smooth user interactions across portfolio sections.",
-"Integrated advanced animations using Framer Motion for engaging user experience, React Scroll for smooth navigation between portfolio sections, and EmailJS for seamless contact form functionality without backend dependencies.",
-"Developed comprehensive form handling with Formik validation for contact forms and project inquiries, ensuring professional client communication and lead capture capabilities for the data analyst's business development.",
-"Implemented modern development workflow with ESLint code quality standards, TypeScript integration for type safety, and automated build processes using Vite bundler for optimal performance and deployment efficiency.",
-    ],
-    href: "https://mihi-portfolio.vercel.app/",
-    logo: "",
-    image: "/assets/projects/image1.png",
-    tags: [
-      {
-        id: 1,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "Vite",
-        path: "/assets/projects/vite.svg",
-      },
-      {
-        id: 3,
-        name: "redux",
-        path: "/assets/projects/redux.svg",
-      },
-      
-      {
-        id: 6,
-        name: "Framer-Motion",
-        path: "/assets/projects/framer.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-  id: 4,
-  title: "Blog Platform",
-  description:
-    "A full-stack blogging platform built with the PERN stack, featuring secure user authentication, complete post management, image uploads via Cloudinary, and a nested comments system with protected routes and responsive design.",
-  subDescription: [
-    "Built a RESTful backend API using Node.js and Express.js with PostgreSQL database, leveraging Prisma ORM for type-safe, schema-driven data access and automated migrations.",
-    "Implemented secure JWT-based authentication with bcrypt password hashing, protected routes on both frontend and backend, and CORS configuration for safe cross-origin requests.",
-    "Developed a responsive React frontend with React Router for client-side navigation, Tailwind CSS for modern UI, and react-paginate for efficient post browsing across large datasets.",
-    "Integrated Cloudinary for reliable image hosting and automatic optimization, with Multer handling file uploads and server-side validation ensuring secure and performant media management.",
-    "User login Email - test@example.com, Password - password123"
-  ],
-  href: "https://blog-app-pern-prisma-cloudinary.vercel.app",
-  logo: "",
-  image: "/assets/projects/blog.png",
-  tags: [
-    { id: 1, name: "React", path: "/assets/logos/react.svg" },
-    { id: 2, name: "NodeJs", path: "/assets/nodejs-icon.svg" },
-    { id: 3, name: "ExpressJs", path: "/assets/expressjs-icon.svg" },
-    { id: 4, name: "PostgreSQL", path: "/assets/projects/postgresql.png" },
-    { id: 5, name: "Prisma", path: "/assets/projects/prisma-orm.png" },
-    { id: 6, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-  ],
-},
-  {
-    id: 5,
-    title: "Apple iPhone 15 Pro Website Clone",
-    description:
-     "A pixel-perfect recreation of Apple's iPhone 15 Pro website showcasing advanced 3D modeling, smooth animations, and interactive product visualization. Features dynamic iPhone models in multiple colors and configurations with professional-grade animations and responsive design.",
-    subDescription: [
-      "Engineered immersive 3D experience using Three.js and React Three Fiber, rendering interactive iPhone 15 Pro models with dynamic color switching, size variations, and 360-degree product visualization, delivering Apple-quality user engagement.",
-"Implemented sophisticated animation system using GSAP and @gsap/react for seamless page transitions, custom video carousels, and smooth scroll-triggered animations, achieving 60fps performance with optimized rendering pipeline.",
-"Built responsive design architecture with Tailwind CSS and Vite bundler, integrating Sentry for error monitoring and performance tracking, ensuring cross-browser compatibility and optimal loading speeds across all devices.",
-"Developed modular component system with React Three Drei utilities for enhanced 3D controls, lighting systems, and material rendering, creating reusable architecture for scalable 3D web applications and interactive product showcases.",
-    ],
-    href: "https://apple-clone-snowy-pi.vercel.app/",
-    logo: "",
-    image: "/assets/projects/image2.png",
-    tags: [
-      {
-        id: 1,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "Vite",
-        path: "/assets/projects/vite.svg",
-      },
-      {
-        id: 3,
-        name: "ThreeJs",
-        path: "/assets/projects/threejs1.svg",
-      },
-      {
-        id: 4,
-        name: "GSAP",
-        path: "assets/projects/gsap.svg",
-      },
-      {
-        id: 5,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  
-
 ];
 
 export const mySocials = [
@@ -228,45 +133,33 @@ export const mySocials = [
 
 export const experiences = [
  {
-    title: "React Developer & UI Engineer ",
-    job: "Colorado State University",
-    date: "2024 - Present",
+    title: "AI | ML Engineer ",
+    job: "Morgan Stanley",
+    date: "Oct 2025 - Present",
     contents: [
-      "Led the architecture and development of a full-stack React application using TypeScript, Redux, and Node.js, deployed via AWS CloudFront with CI/CD. Improved navigation efficiency from 6+ to 2 clicks and boosted performance by 60% across 8 core interfaces.",
-"Developed and maintained a scalable component library with Storybook documentation, Jest/RTL test coverage (85%), and WCAG 2.1 compliance. Accelerated engineering velocity by 40% and enabled consistent UI patterns across teams.",
-"Built a production-grade analytics dashboard using React Hooks, MongoDB, and D3.js, deployed with Docker on AWS EC2, enabling real-time usage tracking and reducing support requests by 50% through data-informed UX improvements.",
-    ],
+      "Reduced inference latency by 40% across fraud scoring pipelines processing 15M+ daily transactions by optimizing distributed Spark workloads, improving feature pipeline efficiency, and eliminating upstream data bottlenecks under high-throughput conditions.",
+"Built and operated scalable ML pipelines for real-time transaction scoring using Kubernetes, Docker, and SageMaker, enabling reliable training, batch inference, and deployment across multi-service production environments.",
+"Improved system reliability and reduced manual review load by 34% by enhancing model calibration and thresholding strategies for highly imbalanced fraud datasets, increasing downstream decision efficiency.",
+"Designed and implemented distributed data ingestion and processing workflows using Kafka and Spark, ensuring high availability, fault tolerance, and consistent throughput for large-scale financial data streams.",
+"Reduced deployment and rollback time by 45% by introducing containerized, versioned ML pipelines with MLflow, enabling reproducible releases and safer production rollouts.",
+"Improved observability across fraud scoring systems by implementing end-to-end monitoring for data drift, prediction quality, and pipeline health using CloudWatch and SQL-based diagnostics, reducing time-to-detect production issues."
+      ],
   },
   {
-    title: "Graduate Research Assistant",
-    job: "Colorado State University",
-    date: "Jan 2025 - Dec 2025",
+    title: "Machine Learning Engineer",
+    job: "Persistent Systems",
+    date: "May 2021 - Nov 2023",
     contents: [
-      "Conducted empirical OSS research under the guidance of Prof. Bianca Trinkenreich, Ph.D., analyzing 404 locked GitHub threads across 213 OSS projects using hierarchical regression and moderation analysis; found that codes of conduct amplified incivility enforcement by 44–46% (p¡0.05).",
-"Built a scalable pipeline using GitHub REST API, Python NLP, and GPT-4 validation to process 5,961 comments, revealing identity attacks triggered admin intervention 83% of the time, while personal attacks increased resolution time by 50% (r=0.50, p¡0.01).",
-"Designed a predictive classification model across 150+ CS415 student projects, detecting ‘gamer’ patterns in 25% of contributors and improving team dynamics forecasting by 40% via GitHub behavior mining and survey analysis.",
-    ],
+     " Designed machine learning and NLP solutions using Python, Scikit-learn, TensorFlow, NLTK, and FastAPI to automate customer support ticket classification and resolution workflows.",
+"Implemented end-to-end ML pipelines for data preprocessing, feature extraction, model training, validation, and deployment using Azure ML, Docker, Git, Jenkins, and Kubernetes platforms.",
+"Boosted ticket categorization accuracy by 31% through supervised learning models, text vectorization techniques, and deep learning-based intent recognition implementations for enterprise customer support automation workflows.",
+"Integrated RESTful APIs and microservices with enterprise applications to support real-time chatbot responses, recommendation systems, and automated incident management operations.",
+"Streamlined model training performance by 45% using distributed computing, GPU acceleration, parallel processing techniques, efficient data pipeline orchestration strategies across large-scale enterprise machine learning environments.",
+"Coordinated with cross-functional development teams in Agile and Scrum environments while maintaining version control, CI/CD pipelines, testing, and production deployment activities.",
+"Processed more than 8M+ enterprise support records using SQL, MongoDB, Apache Spark, and cloud-based analytics services to improve prediction quality and operational efficiency."
+      ],
   },
-  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2024-Present",
-    contents: [
-     "Built custom full-stack applications and portfolio websites for 15+ clients, ranging from small businesses to creative professionals. Delivered scalable solutions using React, Next.js, and modern backend technologies.",
-
-"Managed complete project workflows including client consultation, technical architecture, development, testing, and deployment. Achieved 100% client satisfaction rate with all projects delivered on schedule and optimized for performance and user experience.",
-    ],
-  },
-  {
-    title: "Software Engineer",
-    job: "Outshade Digital Media ",
-    date: "2021-2023",
-    contents: [
-      "Architected scalable WordPress platforms for the Government of Telangana and MakerOfMilkshake using custom PHP, optimized MySQL, and REST APIs, supporting 10,000+ users while reducing maintenance overhead by 20%.",
-      "Developed dynamic front-end experiences with JavaScript, AJAX, and custom WordPress themes, boosting Core Web Vitals and increasing organic traffic by 30% through SEO and performance enhancements.",
-      "Integrated external databases and automated real-time content delivery pipelines using Redis caching and cloud backups on AWS, reducing data sync latency and improving system reliability by 45%.",
-    ],
-  },
+  
 ];
 export const reviews = [
   {
