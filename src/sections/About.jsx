@@ -19,8 +19,13 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Anurag Vemula</p>
             <p className="subtext">
-              Over the last 3 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              Over the last 3+ years, I've designed and deployed 
+production ML systems — from real-time fraud detection 
+pipelines processing 15M+ daily transactions at Morgan Stanley, 
+to RAG systems, LLM evaluation frameworks, and NLP automation 
+at scale. I bridge the gap between research and production, 
+building AI that's fast, reliable, and measurable.
+
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
