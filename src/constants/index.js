@@ -132,33 +132,46 @@ export const mySocials = [
 ];
 
 export const experiences = [
- {
-    title: "AI | ML Engineer ",
-    job: "Morgan Stanley",
-    date: "Oct 2025 - Present",
-    contents: [
-      "Reduced inference latency by 40% across fraud scoring pipelines processing 15M+ daily transactions by optimizing distributed Spark workloads, improving feature pipeline efficiency, and eliminating upstream data bottlenecks under high-throughput conditions.",
-"Built and operated scalable ML pipelines for real-time transaction scoring using Kubernetes, Docker, and SageMaker, enabling reliable training, batch inference, and deployment across multi-service production environments.",
-"Improved system reliability and reduced manual review load by 34% by enhancing model calibration and thresholding strategies for highly imbalanced fraud datasets, increasing downstream decision efficiency.",
-"Designed and implemented distributed data ingestion and processing workflows using Kafka and Spark, ensuring high availability, fault tolerance, and consistent throughput for large-scale financial data streams.",
-"Reduced deployment and rollback time by 45% by introducing containerized, versioned ML pipelines with MLflow, enabling reproducible releases and safer production rollouts.",
-"Improved observability across fraud scoring systems by implementing end-to-end monitoring for data drift, prediction quality, and pipeline health using CloudWatch and SQL-based diagnostics, reducing time-to-detect production issues."
-      ],
-  },
-  {
-    title: "Machine Learning Engineer",
-    job: "Persistent Systems",
-    date: "May 2021 - Nov 2023",
-    contents: [
-     " Designed machine learning and NLP solutions using Python, Scikit-learn, TensorFlow, NLTK, and FastAPI to automate customer support ticket classification and resolution workflows.",
-"Implemented end-to-end ML pipelines for data preprocessing, feature extraction, model training, validation, and deployment using Azure ML, Docker, Git, Jenkins, and Kubernetes platforms.",
-"Boosted ticket categorization accuracy by 31% through supervised learning models, text vectorization techniques, and deep learning-based intent recognition implementations for enterprise customer support automation workflows.",
-"Integrated RESTful APIs and microservices with enterprise applications to support real-time chatbot responses, recommendation systems, and automated incident management operations.",
-"Streamlined model training performance by 45% using distributed computing, GPU acceleration, parallel processing techniques, efficient data pipeline orchestration strategies across large-scale enterprise machine learning environments.",
-"Coordinated with cross-functional development teams in Agile and Scrum environments while maintaining version control, CI/CD pipelines, testing, and production deployment activities.",
-"Processed more than 8M+ enterprise support records using SQL, MongoDB, Apache Spark, and cloud-based analytics services to improve prediction quality and operational efficiency."
-      ],
-  },
+{
+  title: "AI/ML Engineer",
+  job: "Morgan Stanley",
+  date: "Oct 2025 - Present",
+  contents: [
+    "Built a RAG system using LangChain, Pinecone, OCR ingestion, and FastAPI that reached 93%+ answer accuracy with citations and cut document lookup time by 70%, giving analysts reliable answers grounded in source material.",
+    "Designed an agentic MCP and LangGraph workflow that automated 6+ manual investigation steps and cut investigation time by 40%, connecting LLM tool use to internal data and services.",
+    "Engineered fraud detection models with XGBoost, LightGBM, CatBoost, TensorFlow, scikit-learn, and Spark on 15M+ daily transactions and 8TB+ of data, raising accuracy 34% over a rules-based baseline and cutting detection time by 38%.",
+    "Delivered 14 independently deployable microservices using Java 21 Spring Boot, Python FastAPI, and React with TypeScript, using OpenAPI codegen and JVM tuning to cut p99 latency by 84ms and hold it under 250ms.",
+    "Reduced deployment and rollback time by 45% and moved releases from biweekly to weekly by standardizing containerized, versioned ML pipelines with MLflow, Docker, Kubernetes, and Azure DevOps.",
+    "Built 30+ Prometheus, Grafana, Datadog, and CloudWatch dashboards for 5+ teams, cutting incident diagnosis time by 35% and drift time-to-detect by 60% through end-to-end monitoring of data drift, prediction quality, and pipeline health."
+  ],
+},
+{
+  title: "Full Stack Engineer",
+  job: "TILT / Colorado State University",
+  date: "Apr 2024 - Oct 2025",
+  contents: [
+    "Built a RAG chatbot using LangChain, ChromaDB, Ollama, and Mistral that served 35,000+ users with sub-4s latency, developed with Claude Code, Cursor, Codex, and OpenCode.",
+    "Built a 20+ component React and TypeScript library that raised Lighthouse performance scores from 72 to 94, backed by Node.js with Express and GraphQL APIs.",
+    "Built ETL pipelines feeding KPI dashboards that saved 30+ stakeholders 10+ hours per week, on SQL Server, Oracle, and PostgreSQL.",
+    "Wrote 150+ Playwright, Jest, and React Testing Library scenarios with Selenium, Cucumber, and GitHub Actions CI/CD, cutting manual regression effort by 50%.",
+    "Deployed on AWS (EC2, S3, CloudFront) with Docker, and ran a usability survey of 39 participants that surfaced 37 violations, with competitive analysis of 30+ universities.",
+    "Mentored junior engineers on coding standards and design techniques, and ran design and code reviews for teammates' applications."
+  ],
+},
+{
+  title: "Machine Learning Engineer",
+  job: "Persistent Systems",
+  date: "May 2021 - Nov 2023",
+  contents: [
+    "Designed machine learning and NLP solutions using Python, scikit-learn, TensorFlow, NLTK, and FastAPI to automate customer support ticket classification and resolution workflows.",
+    "Built end-to-end ML pipelines for data preprocessing, feature extraction, model training, validation, and deployment using Azure ML, Docker, Git, Jenkins, and Kubernetes.",
+    "Raised ticket classification macro F1 from 0.79 to 0.88, a 31% accuracy gain, through supervised learning, text vectorization with Transformers, and deep learning based intent recognition for enterprise support automation.",
+    "Integrated RESTful APIs and Java Spring Boot microservices with enterprise applications to support real-time chatbot responses, handling 10K+ interactions per month in under 1.5s.",
+    "Cut model training time by 45% using distributed computing, GPU acceleration, and parallel processing across large-scale enterprise machine learning environments.",
+    "Coordinated with cross-functional teams in Agile and Scrum environments while maintaining version control, CI/CD pipelines, testing, and production deployment.",
+    "Processed 8M+ enterprise support records using SQL, MongoDB, Apache Spark, and cloud-based analytics services to improve prediction quality and operational efficiency."
+  ],
+},
   
 ];
 export const reviews = [
